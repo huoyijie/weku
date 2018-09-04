@@ -36,7 +36,7 @@ WEKU is a personal video&amp;photo manager written by python and based on Django
 
 * create super user(input admin username/email/password)
 
-docker exec -it `docker ps -l | grep weku | awk '{print $1}'` python manage.py createsuperuser
+docker exec -it \`docker ps -l | grep weku | awk '{print $1}'\` python manage.py createsuperuser
 
 * open browser
 
