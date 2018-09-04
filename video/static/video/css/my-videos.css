@@ -1,0 +1,48 @@
+/*!
+ * @author: huoyijie
+ * @file: my-videos.css
+ * @time: 2018/08/29
+ *
+ * @copyright: (c) 2018 by huoyijie, https://github.com/huoyijie/weku
+ * @license: GPL v3, see LICENSE for more details.
+ */
+
+.dropdown-menu {
+    min-width: auto;
+}
+
+div[id^="video-"] {
+    height: 150px;
+}
+
+div[id^="video-"] .video-area {
+    width: 80px;
+    height: 150px;
+}
+
+div[id^="video-"] img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+div[id^="video-"] button.cast {
+    position: absolute;
+    top: 154px;
+    left: 50%;
+    transform: translate(-50%);
+    visibility: hidden;
+}
+
+div[id^="video-"] button.play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    color: #ffffff;
+    background: #000000;
+    opacity: 0.5;
+}

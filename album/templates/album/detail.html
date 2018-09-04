@@ -1,0 +1,126 @@
+{# @author: huoyijie #}
+{# @file: detail.html #}
+{# @time: 2018/08/29 #}
+{# @copyright: (c) 2018 by huoyijie, https://github.com/huoyijie/weku #}
+{# @license: GPL v3, see LICENSE for more details. #}
+
+{% extends "base/base.html" %}
+
+{% load i18n %}
+
+{% block title %}{% trans "Album Detail" %}{% endblock %}
+
+{% block headAppend %}
+    <link rel="stylesheet" href="/static/css/avgrund.css">
+    <link rel="stylesheet" href="/static/css/blueimp-gallery.css">
+    <link rel="stylesheet" href="/static/css/blueimp-gallery-indicator.css">
+    <link rel="stylesheet" href="/static/css/blueimp-gallery-video.css">
+    <link rel="stylesheet" href="/static/css/weku-common.css">
+    <link rel="stylesheet" href="/static/album/css/detail.css">
+{% endblock %}
+
+{% block breadcrumb %}
+    <li class="breadcrumb-item"><a href="/index/">{% trans "Home" %}</a></li>
+    <li class="breadcrumb-item"><a href="/album/my-albums/">{% trans "Album" %}</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{ album.name }}</li>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="btn-group mb-1" role="group" aria-label="...">
+            <form id="picture-fileupload" method="post" action="."
+              enctype="multipart/form-data">
+                {% csrf_token %}
+                <button id="op-add-picture" type="button"
+                        class="btn btn-lg btn-light fileinput-button">
+                    <i class="glyphicon glyphicon-picture"></i>
+                    <input id="input-file" type="file" name="file" multiple>
+                </button>
+                <input type="hidden" id="albumId" name="albumId" value="{{ album.id }}">
+                <input type="hidden" id="dirname" name="dirname" value="{{ album.name }}">
+            </form>
+            <form id="video-fileupload" method="post" action="."
+              enctype="multipart/form-data">
+                {% csrf_token %}
+                <button id="op-add-video" type="button"
+                    class="btn btn-lg btn-light fileinput-button">
+                    <i class="glyphicon glyphicon-facetime-video"></i>
+                    <input id="input-file" type="file" name="file" multiple>
+                </button>
+                <input type="hidden" id="albumId" name="albumId" value="{{ album.id }}">
+                <input type="hidden" id="dirname" name="dirname" value="{{ album.name }}#{{ album.id }}">
+            </form>
+            <button id="op-cast" type="button" data-cast-state="false"
+                    class="btn btn-lg btn-light">
+                <i class="glyphicon glyphicon-collapse-up"></i>
+            </button>
+            <button id="op-edit" type="button" data-edit-state="false"
+                    class="btn btn-lg btn-light">
+                <i class="glyphicon glyphicon-edit"></i>
+            </button>
+        </div>
+        <div id="album-media-data" class="row bg-light mx-0 pt-3"
+             data-album-id="{{ album.id }}">
+        </div>
+        <div class="page-load-status">
+          <p class="infinite-scroll-request h4 text-center text-muted">
+              {% trans "Loading..." %}</p>
+          <p class="infinite-scroll-last h4 text-center text-muted invisible">
+              {% trans "Loading last page!" %}</p>
+          <p class="infinite-scroll-error h4 text-center text-muted invisible">
+              {% trans "No more contents!" %}</p>
+        </div>
+    </div>
+{% endblock %}
+
+{% block bodyAppend %}
+    <!-- The Gallery as lightbox dialog, should be a child element of the document body -->
+    <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+        <div class="slides"></div>
+        <h3 class="title"></h3>
+        <a class="prev" href="#">‹</a>
+        <a class="next" href="#">›</a>
+        <a class="close" href="#">×</a>
+        <a class="play-pause" href="#"></a>
+    </div>
+    <div class="modal fade" id="deleteMediaModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">{% trans "Delete Video/Picture" %}</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <p>{% trans "Are you sure you want to delete the video/picture?" %}</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">{% trans "Cancel" %}</button>
+            <button type="button" class="btn btn-secondary submit">{% trans "Confirm Delete" %}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="back-to-top invisible"><i class="glyphicon glyphicon-menu-up"></i></div>
+    <!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included -->
+    <script src="/static/js/jquery.ui.widget.js"></script>
+    <!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
+    <script src="/static/js/jquery.iframe-transport.js"></script>
+    <!-- The basic File Upload plugin -->
+    <script src="/static/js/jquery.fileupload.js"></script>
+    <script src="/static/js/jquery.fileupload-process.js"></script>
+    <script src="/static/js/jquery.fileupload-validate.js"></script>
+    <script src="/static/js/jquery.twbsPagination.js"></script>
+    <script src="/static/js/jquery.avgrund.js"></script>
+    <script src="/static/js/js.cookie.js"></script>
+    <script src="/static/js/csrf.js"></script>
+    <script src="/static/js/blueimp-gallery.js"></script>
+    <script src="/static/js/blueimp-gallery-fullscreen.js"></script>
+    <script src="/static/js/blueimp-gallery-indicator.js"></script>
+    <script src="/static/js/blueimp-gallery-video.js"></script>
+    <script src="/static/js/infinite-scroll.pkgd.js"></script>
+    <script src="/static/js/elevator.js"></script>
+    <script src="/static/js/weku-common.js"></script>
+    <script src="/static/album/js/detail.js"></script>
+{% endblock %}

@@ -1,0 +1,36 @@
+/*!
+ * @author: huoyijie
+ * @file: my-pics.css
+ * @time: 2018/08/29
+ *
+ * @copyright: (c) 2018 by huoyijie, https://github.com/huoyijie/weku
+ * @license: GPL v3, see LICENSE for more details.
+ */
+
+.dropdown-menu {
+    min-width: auto;
+}
+
+div[id^="picture-"] {
+    height: 120px;
+}
+
+div[id^="picture-"] .picture-area {
+    width: 120px;
+    height: 120px;
+}
+
+div[id^="picture-"] img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: solid 1px darkgray;
+}
+
+div[id^="picture-"] button.cast {
+    position: absolute;
+    top: 124px;
+    left: 50%;
+    transform: translate(-50%);
+    visibility: hidden;
+}

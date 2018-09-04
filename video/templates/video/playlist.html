@@ -1,0 +1,59 @@
+{# @author: huoyijie #}
+{# @file: playlist.html #}
+{# @time: 2018/08/29 #}
+{# @copyright: (c) 2018 by huoyijie, https://github.com/huoyijie/weku #}
+{# @license: GPL v3, see LICENSE for more details. #}
+
+{% extends "base/base.html" %}
+
+{% load i18n %}
+
+{% block title %}{% trans "Playlist" %}{% endblock %}
+
+{% block headAppend %}
+    <link rel="stylesheet" href="/static/css/videojs-playlist-ui.vertical.css">
+    <link rel="stylesheet" href="/static/css/video-js.css">
+    <link rel="stylesheet" href="/static/video/css/playlist.css">
+    <script>window.HELP_IMPROVE_VIDEOJS = false;</script>
+    <script src="/static/js/video.js"></script>
+    <script src="/static/js/videojs-playlist.js"></script>
+    <script src="/static/js/videojs-playlist-ui.js"></script>
+{% endblock %}
+
+{% block breadcrumb %}
+    <li class="breadcrumb-item"><a href="/index/">{% trans "Home" %}</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{% trans "Playlist" %}</li>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="my-video-player mx-auto">
+            <div class="row">
+                <video
+                        id="my-player"
+                        class="video-js vjs-fluid"
+                        controls
+                        preload="auto"
+                        autoplay
+                        data-setup='{"autoplay": true}'>
+                    <p class="vjs-no-js">
+                        To view this video please enable JavaScript, and consider
+                        upgrading to
+                        a
+                        web browser that
+                        <a href="http://videojs.com/html5-video-support/" target="_blank">
+                            supports HTML5 video
+                        </a>
+                    </p>
+                </video>
+            </div>
+            <div class="row">
+                <div class="vjs-playlist vjs-playlist-horizontal vjs-fluid"></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block bodyAppend %}
+    <script src="/static/video/js/playlist.js"></script>
+{% endblock %}

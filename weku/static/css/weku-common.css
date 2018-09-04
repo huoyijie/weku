@@ -1,0 +1,47 @@
+/*!
+ * @author: huoyijie
+ * @file: weku-common.css
+ * @time: 2018/08/29
+ *
+ * @copyright: (c) 2018 by huoyijie, https://github.com/huoyijie/weku
+ * @license: GPL v3, see LICENSE for more details.
+ */
+
+.avgrund-popin.my-file-upload-popup {
+    border-radius: 8px;
+    color: #ffffff;
+    background: #000000;
+    opacity: 0.6;
+}
+
+.alert {
+    width: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.6;
+    background-color: black;
+    border-color: black;
+    color: white;
+}
+
+.back-to-top {
+    position: fixed;
+    right: 10px;
+    bottom: 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 2px;
+    color: white;
+    background-color: rgba(0,0,0,.8);
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,.2);
+    font-size: 150%;
+}
+
+.back-to-top i {
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

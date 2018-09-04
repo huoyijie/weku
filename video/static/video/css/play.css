@@ -1,0 +1,18 @@
+/*!
+ * @author: huoyijie
+ * @file: play.css
+ * @time: 2018/08/29
+ *
+ * @copyright: (c) 2018 by huoyijie, https://github.com/huoyijie/weku
+ * @license: GPL v3, see LICENSE for more details.
+ */
+
+.player-area {
+    max-width: 720px;
+    min-width: 200px;
+    margin: 0 auto;
+}
+
+#my-player {
+    height: 500px;
+}

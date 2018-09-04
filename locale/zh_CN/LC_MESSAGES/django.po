@@ -1,0 +1,177 @@
+# @author: yijie.huo@foxmail.com
+# @copyright: (c) 2018 by huoyijie, https://github.com/huoyijie/weku
+# @license: GPL v3, see LICENSE for more details.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-31 12:16+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: album/templates/album/detail.html:11
+msgid "Album Detail"
+msgstr "相册详情"
+
+#: album/templates/album/detail.html:23 album/templates/album/my-albums.html:20
+#: picture/templates/picture/my-pics.html:22
+#: video/templates/video/my-videos.html:19 video/templates/video/play.html:22
+#: video/templates/video/playlist.html:24 weku/templates/base/base.html:53
+#: weku/templates/index.html:21 weku/templates/switch-lang.html:14
+msgid "Home"
+msgstr "首页"
+
+#: album/templates/album/detail.html:24 album/templates/album/my-albums.html:11
+#: album/templates/album/my-albums.html:21 weku/templates/base/base.html:81
+#: weku/templates/index.html:33
+msgid "Album"
+msgstr "相册"
+
+#: album/templates/album/detail.html:67
+msgid "Loading..."
+msgstr "加载中..."
+
+#: album/templates/album/detail.html:69
+msgid "Loading last page!"
+msgstr "正在加载最后一页！"
+
+#: album/templates/album/detail.html:71
+msgid "No more contents!"
+msgstr "已无更多内容！"
+
+#: album/templates/album/detail.html:90
+msgid "Delete Video/Picture"
+msgstr "删除视频/照片"
+
+#: album/templates/album/detail.html:96
+msgid "Are you sure you want to delete the video/picture?"
+msgstr "你确定删除此视频/照片？"
+
+#: album/templates/album/detail.html:99 album/templates/album/my-albums.html:94
+msgid "Cancel"
+msgstr "取消"
+
+#: album/templates/album/detail.html:100
+#: album/templates/album/my-albums.html:96
+msgid "Confirm Delete"
+msgstr "确认删除"
+
+#: album/templates/album/my-albums.html:53
+msgid "Add Album"
+msgstr "添加相册"
+
+#: album/templates/album/my-albums.html:62
+msgid "Please input album name"
+msgstr "请输入相册名"
+
+#: album/templates/album/my-albums.html:65
+msgid "Album name can't be blank!"
+msgstr "相册名不能为空！"
+
+#: album/templates/album/my-albums.html:72
+msgid "Close"
+msgstr "关闭"
+
+#: album/templates/album/my-albums.html:74
+msgid "Submit"
+msgstr "提交"
+
+#: album/templates/album/my-albums.html:83
+msgid "Delete Album"
+msgstr "删除相册"
+
+#: album/templates/album/my-albums.html:90
+msgid ""
+"Are you sure you want to delete all the videos and pictures in the album?"
+msgstr "你确定删除该相册里所有的视频和照片吗？"
+
+#: dlnacast/views.py:114 dlnacast/views.py:115
+msgid "DLNA Device offline."
+msgstr "DLNA设备已下线！"
+
+#: dlnacast/views.py:117 dlnacast/views.py:118
+msgid "DLNA Device not found."
+msgstr "没有发现DLNA设备！"
+
+#: dlnacast/views.py:120 dlnacast/views.py:121
+msgid "Cast Url is blank."
+msgstr "投屏URL为空！"
+
+#: picture/templates/picture/my-pics.html:11
+#: picture/templates/picture/my-pics.html:23 weku/templates/base/base.html:74
+#: weku/templates/index.html:37
+msgid "Picture"
+msgstr "照片"
+
+#: video/templates/video/my-videos.html:11
+#: video/templates/video/my-videos.html:20 video/templates/video/play.html:23
+#: weku/templates/base/base.html:67 weku/templates/index.html:35
+msgid "Video"
+msgstr "视频"
+
+#: video/templates/video/play.html:11 video/templates/video/play.html:24
+msgid "Play"
+msgstr "播放"
+
+#: video/templates/video/playlist.html:11
+#: video/templates/video/playlist.html:25 weku/templates/base/base.html:60
+msgid "Playlist"
+msgstr "播放列表"
+
+#: weku/templates/admin/base_site.html:12
+#: weku/templates/admin/base_site.html:17
+msgid "WEKU Admin"
+msgstr "微酷Admin"
+
+#: weku/templates/base/base.html:22 weku/templates/base/base.html:43
+#: weku/templates/include/footer.html:12 weku/templates/index.html:11
+msgid "WEKU"
+msgstr "微酷"
+
+#: weku/templates/base/base.html:88 weku/templates/switch-lang.html:11
+#: weku/templates/switch-lang.html:15
+msgid "Switch Lang"
+msgstr "切换语言"
+
+#: weku/templates/base/base.html:95
+msgid "Admin"
+msgstr "管理"
+
+#: weku/templates/include/footer.html:16
+msgid "Open Github"
+msgstr "进入Github"
+
+#: weku/templates/index.html:30
+msgid "Record all the touching moments!"
+msgstr "记录所有感人的瞬间！"
+
+#: weku/templates/index.html:62
+msgid "upload at"
+msgstr "上传于"
+
+#: weku/templates/index.html:67
+msgid "Play It"
+msgstr "点击播放"
+
+#: weku/templates/index.html:70
+msgid "Play List"
+msgstr "播放列表"
+
+#: weku/templates/index.html:76
+msgid "th"
+msgstr "个"
+
+#: weku/templates/index.html:77
+msgid "video"
+msgstr "视频"
+
+#: weku/templates/switch-lang.html:33
+msgid "Go"
+msgstr "设置"

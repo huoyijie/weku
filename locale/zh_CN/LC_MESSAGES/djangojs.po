@@ -1,0 +1,85 @@
+# @author: yijie.huo@foxmail.com
+# @copyright: (c) 2018 by huoyijie, https://github.com/huoyijie/weku
+# @license: GPL v3, see LICENSE for more details.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-30 21:53+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: album/static/album/js/detail.js:23
+msgid "Upload Progress"
+msgstr "上传进度"
+
+#: album/static/album/js/detail.js:54
+msgid "Processing..."
+msgstr "后台处理中..."
+
+#: album/static/album/js/detail.js:70
+msgid "removed from upload queue."
+msgstr "已从删除队列删除！"
+
+#: album/static/album/js/detail.js:83
+msgid "upload done."
+msgstr "上传成功！"
+
+#: album/static/album/js/detail.js:91
+msgid "upload fail."
+msgstr "上传失败！"
+
+#: album/static/album/js/detail.js:97
+msgid "Network exception, please re-upload the failed one."
+msgstr "网络异常，请重新上传刚刚上传失败的文件！"
+
+#: album/static/album/js/detail.js:116
+msgid "Only support GIF/PNG/JPG/JPEG pictures!"
+msgstr "只支持GIF/PNG/JPG/JPEG格式照片！"
+
+#: album/static/album/js/detail.js:117
+msgid "Picture can not exceed 10MB!"
+msgstr "照片最大不能超过10MB!"
+
+#: album/static/album/js/detail.js:126
+msgid "Video can not exceed 1.5GB!"
+msgstr "视频最大不能超过1.5GB!"
+
+#: album/static/album/js/detail.js:203
+msgid "Loading last page!"
+msgstr "正在加载最后一页！"
+
+#: album/static/album/js/detail.js:207
+msgid "No more contents!"
+msgstr "已无更多内容！"
+
+#: album/static/album/js/my-albums.js:35
+msgid "Add album successfully."
+msgstr "添加相册成功！"
+
+#: weku/static/js/weku-common.js:41
+msgid "First"
+msgstr "首页"
+
+#: weku/static/js/weku-common.js:42
+msgid "Last"
+msgstr "末页"
+
+#: weku/static/js/weku-common.js:43
+msgid "Previous"
+msgstr "上一页"
+
+#: weku/static/js/weku-common.js:44
+msgid "Next"
+msgstr "下一页"
+
+#: weku/static/js/weku-common.js:219
+msgid "DLNA cast successfully."
+msgstr "投屏成功！"

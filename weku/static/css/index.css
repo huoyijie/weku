@@ -1,0 +1,54 @@
+/*!
+ * @author: huoyijie
+ * @file: index.css
+ * @time: 2018/08/29
+ *
+ * @copyright: (c) 2018 by huoyijie, https://github.com/huoyijie/weku
+ * @license: GPL v3, see LICENSE for more details.
+ */
+
+:root {
+    --jumbotron-padding-y: 3rem;
+}
+
+.jumbotron {
+    padding-top: var(--jumbotron-padding-y);
+    padding-bottom: var(--jumbotron-padding-y);
+    margin-bottom: 0;
+    background-color: #fff;
+}
+
+@media (min-width: 768px) {
+    .jumbotron {
+        padding-top: calc(var(--jumbotron-padding-y) * 2);
+        padding-bottom: calc(var(--jumbotron-padding-y) * 2);
+    }
+}
+
+.jumbotron p:last-child {
+    margin-bottom: 0;
+}
+
+.jumbotron-heading {
+    font-weight: 300;
+}
+
+.jumbotron .container {
+    max-width: 40rem;
+}
+
+section.preview-latest-upload-video div.card {
+    max-width: 720px;
+}
+
+#my-player {
+    height: 300px;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+.badge {
+    font-size: 90%;
+}

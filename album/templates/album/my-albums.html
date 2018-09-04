@@ -1,0 +1,108 @@
+{# @author: huoyijie #}
+{# @file: my-albums.html #}
+{# @time: 2018/08/29 #}
+{# @copyright: (c) 2018 by huoyijie, https://github.com/huoyijie/weku #}
+{# @license: GPL v3, see LICENSE for more details. #}
+
+{% extends "base/base.html" %}
+
+{% load i18n %}
+
+{% block title %}{% trans "Album" %}{% endblock %}
+
+{% block headAppend %}
+    <link rel="stylesheet" href="/static/css/avgrund.css">
+    <link rel="stylesheet" href="/static/css/weku-common.css">
+    <link rel="stylesheet" href="/static/album/css/my-albums.css">
+{% endblock %}
+
+{% block breadcrumb %}
+    <li class="breadcrumb-item"><a href="/index/">{% trans "Home" %}</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{% trans "Album" %}</li>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="btn-group mb-1" role="group" aria-label="...">
+            <button id="op-add" type="button"
+                    class="btn btn-lg btn-light"
+                    data-toggle="modal" data-target="#createAlbumModal">
+                <i class="glyphicon glyphicon-plus"></i>
+            </button>
+            <button id="op-edit" type="button" data-edit-state="false"
+                    class="btn btn-lg btn-light">
+                <i class="glyphicon glyphicon-edit"></i>
+            </button>
+        </div>
+
+        <div id="pagination-data" class="row bg-light px-3 pt-3 mx-0"></div>
+        <nav aria-label="Page navigation">
+            <ul class="pagination pagination-sm justify-content-center"
+                id="pagination"></ul>
+        </nav>
+    </div>
+{% endblock %}
+
+{% block bodyAppend %}
+    <div class="modal fade" id="createAlbumModal" tabindex="-1" role="dialog"
+         aria-labelledby="createAlbumModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="createAlbumModalLabel">
+                {% trans "Add Album" %}</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="needs-validation" novalidate>
+              <div class="form-group">
+                <input type="text" class="form-control" id="album-name" name="name"
+                       placeholder="{% trans 'Please input album name' %}" required
+                       autofocus>
+                <div class="invalid-feedback">
+                    {% trans "Album name can't be blank!" %}
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary"
+                    data-dismiss="modal">{% trans "Close" %}</button>
+            <button type="button" class="btn btn-primary submit">
+                {% trans "Submit" %}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="deleteAlbumModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">{% trans "Delete Album" %}</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <p>
+                  {% trans "Are you sure you want to delete all the videos and pictures in the album?" %}</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">
+                {% trans "Cancel" %}</button>
+            <button type="button" class="btn btn-secondary submit">
+                {% trans "Confirm Delete" %}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/static/js/holder.js"></script>
+    <script src="/static/js/jquery.twbsPagination.js" type="text/javascript"></script>
+    <script src="/static/js/jquery.avgrund.js"></script>
+    <script src="/static/js/js.cookie.js"></script>
+    <script src="/static/js/csrf.js"></script>
+    <script src="/static/js/weku-common.js"></script>
+    <script src="/static/album/js/my-albums.js"></script>
+{% endblock %}

@@ -1,0 +1,82 @@
+/*!
+ * @author: huoyijie
+ * @file: detail.css
+ * @time: 2018/08/29
+ *
+ * @copyright: (c) 2018 by huoyijie, https://github.com/huoyijie/weku
+ * @license: GPL v3, see LICENSE for more details.
+ */
+
+.dropdown-menu {
+    min-width: auto;
+}
+
+.fileinput-button {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.fileinput-button input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  opacity: 0;
+  -ms-filter: 'alpha(opacity=0)';
+  font-size: 200px !important;
+  direction: ltr;
+  cursor: pointer;
+}
+
+/* Fixes for IE < 8 */
+@media screen\9 {
+  .fileinput-button input {
+    filter: alpha(opacity=0);
+    font-size: 100%;
+    height: 100%;
+  }
+}
+
+div[id^="media-"] {
+    height: 120px;
+}
+
+div[id^="media-"] .media-area {
+    width: 120px;
+    height: 120px;
+}
+
+div[id^="media-"] .edit {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+}
+
+div[id^="media-"] img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: solid 1px darkgray;
+}
+
+div[id^="media-"] button.delete,button.cast {
+    position: absolute;
+    top: 124px;
+    left: 50%;
+    transform: translateX(-50%);
+    visibility: hidden;
+}
+
+div[id^="media-"] button.play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    color: #ffffff;
+    background: #000000;
+    opacity: 0.5;
+}

@@ -1,0 +1,51 @@
+/*!
+ * @author: huoyijie
+ * @file: my-albums.css
+ * @time: 2018/08/29
+ *
+ * @copyright: (c) 2018 by huoyijie, https://github.com/huoyijie/weku
+ * @license: GPL v3, see LICENSE for more details.
+ */
+
+div[id^="album-"] {
+    height: 120px;
+}
+
+div[id^="album-"] .album-area {
+    width: 120px;
+    height: 120px;
+}
+
+div[id^="album-"] .edit {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+}
+
+div[id^="album-"] img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: solid 1px darkgray;
+}
+
+div[id^="album-"] .album-cover-overlay {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 120px;
+    height: 20%;
+    background: linear-gradient(to bottom,transparent,rgba(0,0,0,.8));
+    text-align: center;
+    color: #fff;
+    font-size: 80%;
+    padding: 1px;
+}
+
+div[id^="album-"] button.delete,button.cast {
+    position: absolute;
+    top: 124px;
+    left: 50%;
+    transform: translate(-50%);
+    visibility: hidden;
+}
