@@ -1,5 +1,6 @@
 # WEKU(Alpha Stage)
-WEKU is a personal video&amp;photo manager written by python and based on Django/Bootstrap/videojs/FFMpeg. It helps you manage your family's photos and videos and could run on all kind of devices. 
+WEKU is a personal video&amp;photo manager written by python and based on Django/Bootstrap/videojs/FFMpeg. It helps you manage your family's photos and videos and could run on all kind of devices.  If this project is helpful to you, welcome to star. And if you have any problem, please contact me.
+* email: yijie.huo@foxmail.com
 
 ## [Demo website](http://132.232.155.82:9090/)
 * login account: admin/admin1234
